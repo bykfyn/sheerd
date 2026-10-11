@@ -57,7 +57,7 @@
   .statement p {
     margin: 0;
     max-width: 90vw;
-    font-size: clamp(13px, 1.6vw, 16px);
+    font-size: clamp(15px, 2.4vw, 22px);
     line-height: 1.6;
     color: var(--muted);
     text-align: center;
@@ -72,12 +72,19 @@
 
   .cta {
     position: absolute;
-    bottom: 68px;
+    bottom: 76px;
     left: 0;
     right: 0;
     text-align: center;
     font-size: 14px;
     color: var(--dim);
+  }
+
+  .cta-sep { margin: 0 10px; }
+  @media (max-width: 560px) {
+    .cta-item { display: block; }
+    .cta-item + .cta-sep + .cta-item { margin-top: 6px; }
+    .cta-sep { display: none; }
   }
 
   .cta a {
@@ -88,28 +95,6 @@
   }
 
   .cta a:hover {
-    color: var(--fg);
-    border-bottom-color: rgba(242, 240, 235, 0.5);
-  }
-
-  .contact {
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-  }
-
-  .contact a {
-    color: var(--dim);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(140, 136, 128, 0.3);
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .contact a:hover {
     color: var(--fg);
     border-bottom-color: rgba(242, 240, 235, 0.5);
   }
@@ -179,10 +164,10 @@
   </div>
 
   <div class="cta">
-    Experience Sheerd at <a href="https://www.formground.com">Formground.com</a>
+    <span class="cta-item">Contact: <a href="mailto:hello@sheerd.com">hello@sheerd.com</a></span>
+    <span class="cta-sep" aria-hidden="true">&middot;</span>
+    <span class="cta-item">Experience: <a href="https://www.formground.com">Formground.com</a></span>
   </div>
-
-  <div class="contact"><a href="mailto:hello@sheerd.com">hello@sheerd.com</a></div>
 
   <div class="footer">© 2026 Sheerd</div>
 
